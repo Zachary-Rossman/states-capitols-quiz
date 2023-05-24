@@ -5,13 +5,19 @@ let answerDiv = document.querySelector(`#answerChoices`);
 
 // Initial State
 function init(){
-    console.log('This is my initial state. Welcome!');
+    questionDiv.innerHTML = `Click the button below to start the quiz.`;
 };
 
 // Functions
-function startQuiz(event){
-    console.log(event);
-    console.log(`This function will begin the game`);
+function startQuiz(){
+    let q1 = 'What is the capitol of Florida';
+    let a1 = ['Miami', 'Houston', 'Walt Disney World', 'Tallahassee'];
+
+    for (let i = 0; i < a1.length; i++){
+        questionDiv.innerHTML = q1;
+        answerDiv.innerHTML = a1;
+        answerDiv.addEventListener("click", a1);
+    }
 };
 
 // Event Listeners and Init call
