@@ -21,6 +21,7 @@ function init(){
 function startQuiz(){
     let q1 = `What is the capitol of ${states[0]}`;
     let a1 = ['Birmingham', 'Biloxi', 'Talladega', `${capitols[0]}`];
+    playBtnDiv.innerHTML = "Next State";
 
     for (let i = 0; i < a1.length; i++){
         questionDiv.innerHTML = q1;
