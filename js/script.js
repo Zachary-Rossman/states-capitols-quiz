@@ -2,6 +2,14 @@
 let playBtnDiv = document.querySelector(`#playBtn`);
 let questionDiv = document.querySelector(`#question`);
 let answerDiv = document.querySelector(`#answerChoices`);
+let resultsDiv = document.querySelector(`#results`);
+// Response Div Buttons; To be used and changed in each function
+let answerOptions = {
+    a: document.querySelector(`#a`),
+    b: document.querySelector(`#b`),
+    c: document.querySelector(`#c`),
+    d: document.querySelector(`#d`),
+};
 
 // Database of states and capitols
 let states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
@@ -15,21 +23,50 @@ let score = [`${correct - incorrect}/50`];
 // Initial State
 function init(){
     questionDiv.innerHTML = `Click the button below to start the quiz.`;
+    // When button is clicked, quiz begins
+    playBtnDiv.addEventListener("click", q1);
 };
 
 // Functions
-function startQuiz(){
+
+// Function for first state; Will be repeated 50 times in alphabetical order
+function q1(){
     let q1 = `What is the capitol of ${states[0]}`;
-    let a1 = ['Birmingham', 'Biloxi', 'Talladega', `${capitols[0]}`];
+    questionDiv.innerHTML = q1;
+    let r1 = 'Birmingham';
+    let r2 = 'Biloxi';
+    let r3 = 'Talladega';
+    let a1 = `${capitols[0]}`;
     playBtnDiv.innerHTML = "Next State";
 
-    for (let i = 0; i < a1.length; i++){
-        questionDiv.innerHTML = q1;
-        answerDiv.innerHTML = a1;
-        answerDiv.addEventListener("click", a1);
+    let answerOption1 = `${r1}`;
+    let answerOption2 = `${r2}`;
+    let answerOption3 = `${r3}`;
+    let answerOption4 = `${a1}`;
+
+    answerOptions.a.innerHTML = `${answerOption1}`;
+    answerOptions.b.innerHTML = `${answerOption2}`;
+    answerOptions.c.innerHTML = `${answerOption3}`;
+    answerOptions.d.innerHTML = `${answerOption4}`;
+
+    answerOptions.a.addEventListener("click", checkA1);
+    answerOptions.b.addEventListener("click", checkA1);
+    answerOptions.c.addEventListener("click", checkA1);
+    answerOptions.d.addEventListener("click", checkA1);
+
+    function checkA1(){
+        if (answerOptions = answerOption1) {
+            console.log('r1');
+        } else if (answerOptions = answerOption2) {
+            console.log('r2');
+        } else if (answerOptions = answerOption3) {
+            console.log('r3');
+        } else if (answerOptions = answerOption4) {
+            console.log('a1');
+        }
     }
+        
 };
 
 // Event Listeners and Init call
 init();
-playBtn.addEventListener("click", startQuiz);
