@@ -4,12 +4,17 @@ let questionDiv = document.querySelector(`#question`);
 let answerDiv = document.querySelector(`#answerChoices`);
 let resultsDiv = document.querySelector(`#results`);
 // Response Div Buttons; To be used and changed in each function
-let answerOptions = {
-    a: document.querySelector(`#a`),
-    b: document.querySelector(`#b`),
-    c: document.querySelector(`#c`),
-    d: document.querySelector(`#d`),
-};
+let a = document.querySelector(`#a`);
+let aTxt = document.querySelector(`#a-txt`);
+
+let b = document.querySelector(`#b`);
+let bTxt = document.querySelector(`#b-txt`);
+
+let c = document.querySelector(`#c`);
+let cTxt = document.querySelector(`#c-txt`);
+
+let d = document.querySelector(`#d`);
+let dTxt = document.querySelector(`#d-txt`);
 
 // Database of states and capitols
 let states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
@@ -23,6 +28,7 @@ let score = [`${correct - incorrect}/50`];
 // Initial State
 function init(){
     questionDiv.innerHTML = `Click the button below to start the quiz.`;
+
     // When button is clicked, quiz begins
     playBtnDiv.addEventListener("click", q1);
 };
@@ -33,40 +39,35 @@ function init(){
 function q1(){
     let q1 = `What is the capitol of ${states[0]}`;
     questionDiv.innerHTML = q1;
-    let r1 = 'Birmingham';
-    let r2 = 'Biloxi';
-    let r3 = 'Talladega';
-    let a1 = `${capitols[0]}`;
+    let a1 = ['Birmingham', 'Biloxi', 'Talladega', `${capitols[0]}`];
     playBtnDiv.innerHTML = "Next State";
+    let r1 = [""];
 
-    let answerOption1 = `${r1}`;
-    let answerOption2 = `${r2}`;
-    let answerOption3 = `${r3}`;
-    let answerOption4 = `${a1}`;
+    let answerOption1 = a1[0];
+    let answerOption2 = a1[1];
+    let answerOption3 = a1[2];
+    let answerOption4 = a1[3];
 
-    answerOptions.a.innerHTML = `${answerOption1}`;
-    answerOptions.b.innerHTML = `${answerOption2}`;
-    answerOptions.c.innerHTML = `${answerOption3}`;
-    answerOptions.d.innerHTML = `${answerOption4}`;
+    aTxt.innerHTML = `${answerOption1}`;
+    bTxt.innerHTML = `${answerOption2}`;
+    cTxt.innerHTML = `${answerOption3}`;
+    dTxt.innerHTML = `${answerOption4}`;
 
-    answerOptions.a.addEventListener("click", checkA1);
-    answerOptions.b.addEventListener("click", checkA1);
-    answerOptions.c.addEventListener("click", checkA1);
-    answerOptions.d.addEventListener("click", checkA1);
+    a.addEventListener("input", checkA1);
+    b.addEventListener("iput", checkA1);
+    c.addEventListener("input", checkA1);
+    d.addEventListener("input", checkA1);
 
-    function checkA1(){
-        if (answerOptions = answerOption1) {
-            console.log('r1');
-        } else if (answerOptions = answerOption2) {
-            console.log('r2');
-        } else if (answerOptions = answerOption3) {
-            console.log('r3');
-        } else if (answerOptions = answerOption4) {
-            console.log('a1');
-        }
-    }
-        
 };
+
+
+function checkA1(){
+    if (q1 === q1.answerOption4) {
+        console.log('correct');
+    } else {
+        console.log('Incorrect');
+    }
+}
 
 // Event Listeners and Init call
 init();

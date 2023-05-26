@@ -12,12 +12,27 @@
     <main>
         <h1>States & Capitol Quiz</h1>
         <div id="question">Choose the capitol of this state.</div>
-        <div id="answerChoices">
-            <button id="a"></button>
-            <button id="b"></button>
-            <button id="c"></button>
-            <button id="d"></button>
-        </div>
+        <ul id="answerChoices">
+            <li>
+                <input type="radio" name="answer" id="a" class="answer"></input>
+                <label for="a" id="a-txt">Answer</label>
+            </li>
+
+            <li>
+                <input type="radio" name="answer" id="b" class="answer"></input>
+                <label for="b" id="b-txt">Answer</label>
+            </li>
+
+            <li>
+                <input type="radio" name="answer" id="c" class="answer"></input>
+                <label for="c" id="c-txt">Answer</label>
+            </li>
+
+            <li>
+                <input type="radio" name="answer" id="d" class="answer"></input>
+                <label for="d" id="d-txt">Answer</label>
+            </li>
+        </ul>
         <button id="playBtn">Click to Start Quiz</button>
         <div id="results">Quiz Results</div>
     </main>
