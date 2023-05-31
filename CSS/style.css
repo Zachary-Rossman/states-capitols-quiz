@@ -1,0 +1,9 @@
+.answerCard{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    border: 2px 2px 2px solid blue;
+    max-width: auto;
+}

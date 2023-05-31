@@ -5,16 +5,12 @@ let answerDiv = document.querySelector(`#answerChoices`);
 let resultsDiv = document.querySelector(`#results`);
 // Response Div Buttons; To be used and changed in each function
 let a = document.querySelector(`#a`);
-let aTxt = document.querySelector(`#a-txt`);
 
 let b = document.querySelector(`#b`);
-let bTxt = document.querySelector(`#b-txt`);
 
 let c = document.querySelector(`#c`);
-let cTxt = document.querySelector(`#c-txt`);
 
 let d = document.querySelector(`#d`);
-let dTxt = document.querySelector(`#d-txt`);
 
 // Database of states and capitols
 let states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
@@ -62,36 +58,82 @@ function q1(){
     let answerOption4 = a1[3];
 
     // Displays option text in the HTML
-    aTxt.innerHTML = `${answerOption1}`;
-    bTxt.innerHTML = `${answerOption2}`;
-    cTxt.innerHTML = `${answerOption3}`;
-    dTxt.innerHTML = `${answerOption4}`;
+    a.innerHTML = `${answerOption1}`;
+    b.innerHTML = `${answerOption2}`;
+    c.innerHTML = `${answerOption3}`;
+    d.innerHTML = `${answerOption4}`;
 
     // Event listeners for each option
     a.addEventListener("click", function checkA(){
         if (a.click){
-            // Increments 1 to incorrect and stores to local storage; lowers score by 1
-            incorrect ++;
-
-            // Remove question
-            questionDiv.innerHTML = "";
-
-            // Hides answers
-            answerDiv.style.display = 'none';
-
             // Show play button for next question
             playBtnDiv.style.display = 'flex';
-
+            
             // Text for button
             playBtnDiv.innerHTML = 'Next State';
-
+            
             // Event listener for next button
-            playBtnDiv.addEventListener("click", showResults);
+            playBtnDiv.addEventListener("click", function responseA(){
+                // Increments incorrect score by 1
+                incorrect ++;
 
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
+                // Calls next function
+                showResults();
+            });
+        }
+    });
+    b.addEventListener("click", function checkB(){
+        if (b.click){
+            // Show play button for next question
+            playBtnDiv.style.display = 'flex';
+            
+            // Text for button
+            playBtnDiv.innerHTML = 'Next State';
+            
+            // Event listener for next button
+            playBtnDiv.addEventListener("click", function responseB(){
+                // Increments incorrect score by 1
+                incorrect ++;
+
+                // Calls next function
+                showResults();
+            });
+        }
+    });
+    c.addEventListener("click", function checkC(){
+        if (c.click){
+            // Show play button for next question
+            playBtnDiv.style.display = 'flex';
+            
+            // Text for button
+            playBtnDiv.innerHTML = 'Next State';
+            
+            // Event listener for next button
+            playBtnDiv.addEventListener("click", function responseC(){
+                // Increments incorrect score by 1
+                incorrect ++;
+
+                // Calls next function
+                showResults();
+            });
+        }
+    });
+    d.addEventListener("click", function checkD(){
+        if (d.click){
+            // Show play button for next question
+            playBtnDiv.style.display = 'flex';
+            
+            // Text for button
+            playBtnDiv.innerHTML = 'Next State';
+            
+            // Event listener for next button
+            playBtnDiv.addEventListener("click", function responseD(){
+                // Increments correct score by 1
+                correct ++;
+
+                // Calls next function
+                showResults();
+            });
         }
     });
     // End of this question's function
@@ -101,8 +143,11 @@ function q1(){
 function showResults(){
     // Calculates score
     score = Math.floor(correct-incorrect);
+
+    //Set score to local storage
     
-    // Display the score
+
+    // Display the score while pulling from local storage
     resultsDiv.innerHTML = `Incorrect: ${incorrect} <br> Correct: ${correct} <br> Score: ${score}`;
 };
 
