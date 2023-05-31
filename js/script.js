@@ -66,76 +66,55 @@ function q1(){
     // Event listeners for each option
     a.addEventListener("click", function checkA(){
         if (a.click){
-            // Show play button for next question
-            playBtnDiv.style.display = 'flex';
-            
-            // Text for button
-            playBtnDiv.innerHTML = 'Next State';
-            
-            // Event listener for next button
-            playBtnDiv.addEventListener("click", function responseA(){
-                // Increments incorrect score by 1
-                incorrect ++;
+            // Hide answers
+            answerDiv.style.display = 'none';
 
-                // Calls next function
-                showResults();
-            });
+            // Increments incorrect score by 1
+            incorrect ++;
+
+            // Calls next function
+            showResults();
         }
     });
+
     b.addEventListener("click", function checkB(){
         if (b.click){
-            // Show play button for next question
-            playBtnDiv.style.display = 'flex';
-            
-            // Text for button
-            playBtnDiv.innerHTML = 'Next State';
-            
-            // Event listener for next button
-            playBtnDiv.addEventListener("click", function responseB(){
-                // Increments incorrect score by 1
-                incorrect ++;
+            // Hide answers
+            answerDiv.style.display = 'none';
 
-                // Calls next function
-                showResults();
-            });
+            // Increments incorrect score by 1
+            incorrect ++;
+
+            // Calls next function
+            showResults();
         }
     });
+
     c.addEventListener("click", function checkC(){
         if (c.click){
-            // Show play button for next question
-            playBtnDiv.style.display = 'flex';
-            
-            // Text for button
-            playBtnDiv.innerHTML = 'Next State';
-            
-            // Event listener for next button
-            playBtnDiv.addEventListener("click", function responseC(){
-                // Increments incorrect score by 1
-                incorrect ++;
+            // Hide answers
+            answerDiv.style.display = 'none';
 
-                // Calls next function
-                showResults();
-            });
+            // Increments incorrect score by 1
+            incorrect ++;
+
+            // Calls next function
+            showResults();
         }
     });
+
     d.addEventListener("click", function checkD(){
-        if (d.click){
-            // Show play button for next question
-            playBtnDiv.style.display = 'flex';
-            
-            // Text for button
-            playBtnDiv.innerHTML = 'Next State';
-            
-            // Event listener for next button
-            playBtnDiv.addEventListener("click", function responseD(){
-                // Increments correct score by 1
-                correct ++;
+        if(d.click){
+            // Hide answers
+            answerDiv.style.display = 'none';
 
-                // Calls next function
-                showResults();
-            });
-        }
-    });
+            // Inrement correct score by 1
+            correct ++;
+
+            // Calls next function
+            showResults();
+        } 
+    })
     // End of this question's function
 };
 
