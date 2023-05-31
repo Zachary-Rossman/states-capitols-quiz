@@ -8,34 +8,36 @@
     <title>States & Capitols Quiz</title>
 </head>
 <body>
-    <header></header>
+    <header class="header"></header>
     <main>
-        <h1>States & Capitol Quiz</h1>
-        <div id="question">Choose the capitol of this state.</div>
-        <ul id="answerChoices">
+        <h1 class="title">States & Capitol Quiz</h1>
+        <div id="question" class="question">Choose the capitol of this state.</div>
+        <ul id="answerChoices" class="answerSection">
             <li>
-                <input type="radio" name="answer" id="a" class="answer"></input>
+                <button type="radio" name="answer" id="a" class="answer"></button>
                 <label for="a" id="a-txt">Answer</label>
             </li>
 
             <li>
-                <input type="radio" name="answer" id="b" class="answer"></input>
+                <button type="radio" name="answer" id="b" class="answer"></button>
                 <label for="b" id="b-txt">Answer</label>
             </li>
 
             <li>
-                <input type="radio" name="answer" id="c" class="answer"></input>
+                <button type="radio" name="answer" id="c" class="answer"></button>
                 <label for="c" id="c-txt">Answer</label>
             </li>
 
             <li>
-                <input type="radio" name="answer" id="d" class="answer"></input>
+                <button type="radio" name="answer" id="d" class="answer"></button>
                 <label for="d" id="d-txt">Answer</label>
             </li>
         </ul>
-        <button id="playBtn">Click to Start Quiz</button>
-        <div id="results">Quiz Results</div>
+        <button id="playBtn" class="startBtn">Click to Start Quiz</button>
+        <div id="results" class="results">Quiz Results</div>
     </main>
+
+    <footer class="footer">Made by Zachary Rossman <br><button class="githubBtn"><a href="https://github.com/Zachary-Rossman">See my github to see more of my projects!</a></button></footer>
     
     <script src="./js/script.js"></script>
 </body>

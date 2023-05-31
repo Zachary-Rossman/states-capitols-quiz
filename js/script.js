@@ -23,7 +23,7 @@ let capitols = ['Montgomery', 'Jueau', 'Phoenix', 'Little Rock', 'Sacramento', '
 // Correct and incorrect responses need to be added for results
 let correct = 0;
 let incorrect = 0;
-let score = [`${correct - incorrect}/50`];
+let score = [];
 
 // Initial State
 function init(){
@@ -52,7 +52,7 @@ function q1(){
     answerDiv.style.display = 'flex';
     answerDiv.style = 'flex-direction: column';
 
-    // Change text in button for user directions
+    // Remove play button 
     playBtnDiv.style.display = 'none';
 
     // Bind options to the a1 array
@@ -68,155 +68,25 @@ function q1(){
     dTxt.innerHTML = `${answerOption4}`;
 
     // Event listeners for each option
-    a.addEventListener("input", function checkA(){
-        if (a.input = true){
+    a.addEventListener("click", function checkA(){
+        if (a.click){
             // Increments 1 to incorrect and stores to local storage; lowers score by 1
             incorrect ++;
 
-            // Hides answers to reset buttons
+            // Remove question
+            questionDiv.innerHTML = "";
+
+            // Hides answers
             answerDiv.style.display = 'none';
 
-            // Calls next function
-            q2();
+            // Show play button for next question
+            playBtnDiv.style.display = 'flex';
 
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
-        }
-    });
-    b.addEventListener("input", function checkB(){
-        if (b.input = true){
-            // Increments 1 to incorrect and stores to local storage; lowers score by 1
-            incorrect ++;
+            // Text for button
+            playBtnDiv.innerHTML = 'Next State';
 
-            // Hides answers to reset buttons
-            answerDiv.style.display = 'none';
-
-            // Calls next function
-            q2();
-
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
-        }
-    });
-    c.addEventListener("input", function checkC(){
-        if (c.input = true){
-            // Increments 1 to incorrect and stores to local storage; lowers score by 1
-            incorrect ++;
-
-            // Hides answers to reset buttons
-            answerDiv.style.display = 'none';
-
-            // Calls next function
-            q2();
-
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
-        }
-    });
-    d.addEventListener("input", function checkD(){
-        if (d.input = true){
-            // Increments 1 to correct and stores to local storage; raises score by 1
-            correct ++;
-
-            // Hides answers to reset buttons
-            answerDiv.style.display = 'none';
-
-            // Calls next function
-            q2();
-
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
-        }
-    });
-    // End of this question's function
-};
-
-function q2(){
-    
-    // Displays question for user to see
-    let q2 = `What is the capitol of ${states[1]}`;
-    questionDiv.innerHTML = q2;
-    
-    // Answer Choices
-    let a2 = ['Anchorage', `${capitols[1]}`, 'Yukon', 'Fairbanks'];
-
-    // Displays answers for user to select
-    answerDiv.style.display = 'flex';
-    answerDiv.style = 'flex-direction: column';
-
-    // Change text in button for user directions
-    playBtnDiv.style.display = 'none';
-
-    // Bind options to the a1 array
-    let answerOption1 = a2[0];
-    let answerOption2 = a2[1];
-    let answerOption3 = a2[2];
-    let answerOption4 = a2[3];
-
-    // Displays option text in the HTML
-    aTxt.innerHTML = `${answerOption1}`;
-    bTxt.innerHTML = `${answerOption2}`;
-    cTxt.innerHTML = `${answerOption3}`;
-    dTxt.innerHTML = `${answerOption4}`;
-
-    // Event listeners for each option
-    a.addEventListener("input", function checkA(){
-        if (a.input = true){
-            // Increments 1 to incorrect and stores to local storage; lowers score by 1
-            incorrect ++;
-
-            // Calls next function
-            showResults();
-
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
-        }
-    });
-    b.addEventListener("input", function checkB(){
-        if (b.input = true){
-            // Increments 1 to correct and stores to local storage; raises score by 1
-            correct ++;
-
-            // Calls next function
-            showResults();
-
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
-        }
-    });
-    c.addEventListener("input", function checkC(){
-        if (c.input = true){
-            // Increments 1 to incorrect and stores to local storage; lowers score by 1
-            incorrect ++;
-
-            // Calls next function
-            showResults();
-
-            // Base to be used later for reset of user selection
-            // playBtnDiv.style.display = 'flex';
-            // playBtnDiv.innerHTML = 'Next State';
-            // playBtnDiv.addEventListener("click", q2);
-        }
-    });
-    d.addEventListener("input", function checkD(){
-        if (d.input = true){
-            // Increments 1 to incorrect and stores to local storage; lowers score by 1
-            incorrect ++;
-
-            // Calls next function
-            showResults();
+            // Event listener for next button
+            playBtnDiv.addEventListener("click", showResults);
 
             // Base to be used later for reset of user selection
             // playBtnDiv.style.display = 'flex';
@@ -229,7 +99,11 @@ function q2(){
 
 // Shows results at end of quiz from local storage
 function showResults(){
-    resultsDiv.innerHTML = score;
+    // Calculates score
+    score = Math.floor(correct-incorrect);
+    
+    // Display the score
+    resultsDiv.innerHTML = `Incorrect: ${incorrect} <br> Correct: ${correct} <br> Score: ${score}`;
 };
 
 // Event Listeners and Init call
