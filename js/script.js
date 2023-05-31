@@ -19,7 +19,7 @@ let capitols = ['Montgomery', 'Jueau', 'Phoenix', 'Little Rock', 'Sacramento', '
 // Correct and incorrect responses need to be added for results
 let correct = 0;
 let incorrect = 0;
-let score = [];
+let score = ``;
 
 // Initial State
 function init(){
@@ -38,11 +38,11 @@ function init(){
 function q1(){
     
     // Displays question for user to see
-    let q1 = `What is the capitol of ${states[0]}`;
-    questionDiv.innerHTML = q1;
+    let question = `What is the capitol of ${states[0]}`;
+    questionDiv.innerHTML = question;
     
     // Answer Choices
-    let a1 = ['Birmingham', 'Biloxi', 'Talladega', `${capitols[0]}`];
+    let answerOptions = ['Birmingham', 'Biloxi', 'Talladega', `${capitols[0]}`];
 
     // Displays answers for user to select
     answerDiv.style.display = 'flex';
@@ -51,11 +51,11 @@ function q1(){
     // Remove play button 
     playBtnDiv.style.display = 'none';
 
-    // Bind options to the a1 array
-    let answerOption1 = a1[0];
-    let answerOption2 = a1[1];
-    let answerOption3 = a1[2];
-    let answerOption4 = a1[3];
+    // Bind options to the answerChoices array
+    let answerOption1 = answerOptions[0];
+    let answerOption2 = answerOptions[1];
+    let answerOption3 = answerOptions[2];
+    let answerOption4 = answerOptions[3];
 
     // Displays option text in the HTML
     a.innerHTML = `${answerOption1}`;
@@ -64,7 +64,103 @@ function q1(){
     d.innerHTML = `${answerOption4}`;
 
     // Event listeners for each option
-    a.addEventListener("click", function checkA(){
+    a.addEventListener("click", function checkA1(){
+        if (a.click){
+            // Hide answers
+            answerDiv.style.display = 'none';
+
+            // Increments incorrect score by 1
+            incorrect ++;
+
+            // Calls next function
+            q2();
+
+            // Ends this function
+            return;
+        }
+    });
+
+    b.addEventListener("click", function checkB1(){
+        if (b.click){
+            // Hide answers
+            answerDiv.style.display = 'none';
+
+            // Increments incorrect score by 1
+            incorrect ++;
+
+            // Calls next function
+            q2();
+
+            // Ends this function
+            return;
+        }
+    });
+
+    c.addEventListener("click", function checkC1(){
+        if (c.click){
+            // Hide answers
+            answerDiv.style.display = 'none';
+
+            // Increments incorrect score by 1
+            incorrect ++;
+
+            // Calls next function
+            q2();
+
+            // Ends this function
+            return;
+        }
+    });
+
+    d.addEventListener("click", function checkD1(){
+        if(d.click){
+            // Hide answers
+            answerDiv.style.display = 'none';
+
+            // Inrement correct score by 1
+            correct ++;
+
+            // Calls next function
+            q2();
+
+            // Ends this function
+            return;
+        } 
+    });
+    // End of this question's function
+};
+
+// Second question
+function q2(){
+    
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[1]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = ['Fairbanks', `${capitols[1]}`, 'Anchorage', `Yukon`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+    // Bind options to the answerChoices array
+    let answerOption1 = answerOptions[0];
+    let answerOption2 = answerOptions[1];
+    let answerOption3 = answerOptions[2];
+    let answerOption4 = answerOptions[3];
+
+    // Displays option text in the HTML
+    a.innerHTML = `${answerOption1}`;
+    b.innerHTML = `${answerOption2}`;
+    c.innerHTML = `${answerOption3}`;
+    d.innerHTML = `${answerOption4}`;
+
+    // Event listeners for each option
+    a.addEventListener("click", function checkA2(){
         if (a.click){
             // Hide answers
             answerDiv.style.display = 'none';
@@ -74,23 +170,29 @@ function q1(){
 
             // Calls next function
             showResults();
+
+            // Ends this function
+            return;
         }
     });
 
-    b.addEventListener("click", function checkB(){
+    b.addEventListener("click", function checkB2(){
         if (b.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Increments incorrect score by 1
-            incorrect ++;
+            // Increments correct score by 1
+            correct ++;
 
             // Calls next function
             showResults();
+
+            // Ends this function
+            return;
         }
     });
 
-    c.addEventListener("click", function checkC(){
+    c.addEventListener("click", function checkC2(){
         if (c.click){
             // Hide answers
             answerDiv.style.display = 'none';
@@ -100,19 +202,25 @@ function q1(){
 
             // Calls next function
             showResults();
+
+            // Ends this function
+            return;
         }
     });
 
-    d.addEventListener("click", function checkD(){
+    d.addEventListener("click", function checkD2(){
         if(d.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Inrement correct score by 1
-            correct ++;
+            // Inrement incorrect score by 1
+            incorrect ++;
 
             // Calls next function
             showResults();
+
+            // Ends this function
+            return;
         } 
     })
     // End of this question's function
