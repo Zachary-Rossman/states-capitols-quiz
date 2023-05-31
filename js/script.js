@@ -3,23 +3,13 @@ let playBtnDiv = document.querySelector(`#playBtn`);
 let questionDiv = document.querySelector(`#question`);
 let answerDiv = document.querySelector(`#answerChoices`);
 let resultsDiv = document.querySelector(`#results`);
-// Response Div Buttons; To be used and changed in each function
-let a = document.querySelector(`#a`);
-
-let b = document.querySelector(`#b`);
-
-let c = document.querySelector(`#c`);
-
-let d = document.querySelector(`#d`);
 
 // Database of states and capitols
 let states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 let capitols = ['Montgomery', 'Jueau', 'Phoenix', 'Little Rock', 'Sacramento', 'Denver', 'Hartford', 'Dover', 'Tallahassee', 'Atlanta', 'Honolulu', 'Boise', 'Springfield', 'Indianapolis', 'Des Moines', 'Topeka', 'Frankfort', 'Baton Rouge', 'Augusta', 'Annapolis', 'Boston', 'Lansing', 'St. Paul', 'Jackson', 'Jefferson City', 'Helena', 'Lincoln', 'Carson City', 'Concord', 'Trenton', 'Santa Fe', 'Albany', 'Raleigh', 'Bismarck', 'Columbus', 'Oklahoma City', 'Salem', 'Harrisburg', 'Providence', 'Columbia', 'Pierre', 'Nashville', 'Austin', 'Salt Lake City', 'Montpelier', 'Richmond', 'Olympia', 'Charleston', 'Madison', 'Cheyenne'];
 
 // Correct and incorrect responses need to be added for results
-let correct = 0;
-let incorrect = 0;
-let score = ``;
+let correct = [];
 
 // Initial State
 function init(){
@@ -57,63 +47,52 @@ function q1(){
     let answerOption3 = answerOptions[2];
     let answerOption4 = answerOptions[3];
 
+    // Define a,b,c,d to match question to prevent from click event happening on more than one function at a time
+    let a1 = document.querySelector(`#a`);
+    let b1 = document.querySelector(`#b`);
+    let c1 = document.querySelector(`#c`);
+    let d1 = document.querySelector(`#d`);
+
     // Displays option text in the HTML
-    a.innerHTML = `${answerOption1}`;
-    b.innerHTML = `${answerOption2}`;
-    c.innerHTML = `${answerOption3}`;
-    d.innerHTML = `${answerOption4}`;
+    a1.innerHTML = `${answerOption1}`;
+    b1.innerHTML = `${answerOption2}`;
+    c1.innerHTML = `${answerOption3}`;
+    d1.innerHTML = `${answerOption4}`;
+
 
     // Event listeners for each option
-    a.addEventListener("click", function checkA1(){
-        if (a.click){
+   a1.addEventListener("click", function checkA1(){
+        if (a1.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Increments incorrect score by 1
-            incorrect ++;
-
             // Calls next function
             q2();
-
-            // Ends this function
-            return;
         }
     });
 
-    b.addEventListener("click", function checkB1(){
-        if (b.click){
+    b1.addEventListener("click", function checkB1(){
+        if (b1.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Increments incorrect score by 1
-            incorrect ++;
-
             // Calls next function
             q2();
-
-            // Ends this function
-            return;
         }
     });
 
-    c.addEventListener("click", function checkC1(){
-        if (c.click){
+    c1.addEventListener("click", function checkC1(){
+        if (c1.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Increments incorrect score by 1
-            incorrect ++;
-
             // Calls next function
             q2();
-
-            // Ends this function
-            return;
         }
     });
 
-    d.addEventListener("click", function checkD1(){
-        if(d.click){
+    d1.addEventListener("click", function checkD1(){
+        if(d1.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
@@ -122,17 +101,12 @@ function q1(){
 
             // Calls next function
             q2();
-
-            // Ends this function
-            return;
-        } 
+        }
     });
-    // End of this question's function
 };
 
 // Second question
 function q2(){
-    
     // Displays question for user to see
     let question = `What is the capitol of ${states[1]}`;
     questionDiv.innerHTML = question;
@@ -153,31 +127,31 @@ function q2(){
     let answerOption3 = answerOptions[2];
     let answerOption4 = answerOptions[3];
 
+    // Re define a,b,c,d to match question to prevent from click event happening on more than one function at a time
+    let a2 = document.querySelector(`#a`);
+    let b2 = document.querySelector(`#b`);
+    let c2 = document.querySelector(`#c`);
+    let d2 = document.querySelector(`#d`);
+
     // Displays option text in the HTML
-    a.innerHTML = `${answerOption1}`;
-    b.innerHTML = `${answerOption2}`;
-    c.innerHTML = `${answerOption3}`;
-    d.innerHTML = `${answerOption4}`;
+    a2.innerHTML = `${answerOption1}`;
+    b2.innerHTML = `${answerOption2}`;
+    c2.innerHTML = `${answerOption3}`;
+    d2.innerHTML = `${answerOption4}`;
 
     // Event listeners for each option
-    a.addEventListener("click", function checkA2(){
-        if (a.click){
+    a2.addEventListener("click", function checkA2(){
+        if (a2.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Increments incorrect score by 1
-            incorrect ++;
-
             // Calls next function
             showResults();
-
-            // Ends this function
-            return;
         }
     });
 
-    b.addEventListener("click", function checkB2(){
-        if (b.click){
+    b2.addEventListener("click", function checkB2(){
+        if (b2.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
@@ -186,56 +160,40 @@ function q2(){
 
             // Calls next function
             showResults();
-
-            // Ends this function
-            return;
         }
     });
 
-    c.addEventListener("click", function checkC2(){
-        if (c.click){
+    c2.addEventListener("click", function checkC2(){
+        if (c2.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Increments incorrect score by 1
-            incorrect ++;
-
             // Calls next function
             showResults();
-
-            // Ends this function
-            return;
         }
     });
 
-    d.addEventListener("click", function checkD2(){
-        if(d.click){
+    d2.addEventListener("click", function checkD2(){
+        if(d2.click){
             // Hide answers
             answerDiv.style.display = 'none';
 
-            // Inrement incorrect score by 1
-            incorrect ++;
-
             // Calls next function
             showResults();
-
-            // Ends this function
-            return;
         } 
-    })
-    // End of this question's function
+    });
 };
 
 // Shows results at end of quiz from local storage
 function showResults(){
-    // Calculates score
-    score = Math.floor(correct-incorrect);
+    // Loop through correct and incorrect to get sum before calculating score
+    console.log(correct);
 
     //Set score to local storage
     
 
     // Display the score while pulling from local storage
-    resultsDiv.innerHTML = `Incorrect: ${incorrect} <br> Correct: ${correct} <br> Score: ${score}`;
+    resultsDiv.innerHTML = `Score: ${correct}/50`;
 };
 
 // Event Listeners and Init call
