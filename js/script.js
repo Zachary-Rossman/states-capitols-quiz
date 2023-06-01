@@ -2068,7 +2068,7 @@ function q22(){
     questionDiv.innerHTML = question;
     
     // Answer Choices
-    let answerOptions = [`${capitols[21]}`, `Ann Arbor`, `Lansing`,`Grand Rapids`];
+    let answerOptions = [`${capitols[21]}`, `Ann Arbor`, `Detroit`,`Grand Rapids`];
 
     // Displays answers for user to select
     answerDiv.style.display = 'flex';
@@ -2653,7 +2653,7 @@ function q28(){
     questionDiv.innerHTML = question;
     
     // Answer Choices
-    let answerOptions = [`Reno`, `Mesquite`, `Las Vegas`,`${capitols[22]}`];
+    let answerOptions = [`Reno`, `Mesquite`, `Las Vegas`,`${capitols[27]}`];
 
     // Displays answers for user to select
     answerDiv.style.display = 'flex';
@@ -3345,8 +3345,8 @@ function q35(){
     // Create new buttons for responses
     let a35 = document.createElement('button');
     let b35 = document.createElement('button');
-    let c32 = document.createElement('button');
-    let d32 = document.createElement('button');
+    let c35 = document.createElement('button');
+    let d35 = document.createElement('button');
 
 
     // Set text for each button
@@ -3908,12 +3908,991 @@ function q40(){
     });
 };
 
+// South Dakota Question
+function q41(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[40]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`${capitols[40]}`, `Rapid City`, `Aberdeen`,`Sioux Falls`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a41 = document.createElement('button');
+    let b41 = document.createElement('button');
+    let c41 = document.createElement('button');
+    let d41 = document.createElement('button');
+
+
+    // Set text for each button
+    a41.innerHTML = `<button id = "a41" class = "a">${answerOptions[0]}</button>`;
+    b41.innerHTML = `<button id = "b41" class = "b">${answerOptions[1]}</button>`;
+    c41.innerHTML = `<button id = "c41" class = "c">${answerOptions[2]}</button>`;
+    d41.innerHTML = `<button id = "d41" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a41);
+    answerSection.appendChild(b41);
+    answerSection.appendChild(c41);
+    answerSection.appendChild(d41);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a41.addEventListener("click", function checka41(){
+        if (a41.click){
+            // Hide answers
+            a41.style.display = 'none';
+            b41.style.display = 'none';
+            c41.style.display = 'none';
+            d41.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q42();
+        }
+    });
+
+    b41.addEventListener("click", function checkb41(){
+        if (b41.click){
+            // Hide answers
+            a41.style.display = 'none';
+            b41.style.display = 'none';
+            c41.style.display = 'none';
+            d41.style.display = 'none';
+
+            // Calls next function
+            q42();
+        }
+    });
+
+    c41.addEventListener("click", function checkc41(){
+        if (c41.click){
+            // Hide answers
+            a41.style.display = 'none';
+            b41.style.display = 'none';
+            c41.style.display = 'none';
+            d41.style.display = 'none';
+
+            // Calls next function
+            q42();
+        }
+    });
+
+    d41.addEventListener("click", function checkd41(){
+        if(d41.click){
+            // Hide answers
+            a41.style.display = 'none';
+            b41.style.display = 'none';
+            c41.style.display = 'none';
+            d41.style.display = 'none';
+
+            // Calls next function
+            q42();
+        }
+    });
+};
+
+// Tennessee Question
+function q42(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[41]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`Memphis`, `${capitols[41]}`, `Knoxville`,`Bristol`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a42 = document.createElement('button');
+    let b42 = document.createElement('button');
+    let c42 = document.createElement('button');
+    let d42 = document.createElement('button');
+
+
+    // Set text for each button
+    a42.innerHTML = `<button id = "a42" class = "a">${answerOptions[0]}</button>`;
+    b42.innerHTML = `<button id = "b42" class = "b">${answerOptions[1]}</button>`;
+    c42.innerHTML = `<button id = "c42" class = "c">${answerOptions[2]}</button>`;
+    d42.innerHTML = `<button id = "d42" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a42);
+    answerSection.appendChild(b42);
+    answerSection.appendChild(c42);
+    answerSection.appendChild(d42);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a42.addEventListener("click", function checka42(){
+        if (a42.click){
+            // Hide answers
+            a42.style.display = 'none';
+            b42.style.display = 'none';
+            c42.style.display = 'none';
+            d42.style.display = 'none';
+
+            // Calls next function
+            q43();
+        }
+    });
+
+    b42.addEventListener("click", function checkb42(){
+        if (b42.click){
+            // Hide answers
+            a42.style.display = 'none';
+            b42.style.display = 'none';
+            c42.style.display = 'none';
+            d42.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q43();
+        }
+    });
+
+    c42.addEventListener("click", function checkc42(){
+        if (c42.click){
+            // Hide answers
+            a42.style.display = 'none';
+            b42.style.display = 'none';
+            c42.style.display = 'none';
+            d42.style.display = 'none';
+
+            // Calls next function
+            q43();
+        }
+    });
+
+    d42.addEventListener("click", function checkd42(){
+        if(d42.click){
+            // Hide answers
+            a42.style.display = 'none';
+            b42.style.display = 'none';
+            c42.style.display = 'none';
+            d42.style.display = 'none';
+
+            // Calls next function
+            q43();
+        }
+    });
+};
+
+// Texas Question
+function q43(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[42]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`Houston`, `El Paso`, `San Antonio`,`${capitols[42]}`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a43 = document.createElement('button');
+    let b43 = document.createElement('button');
+    let c43 = document.createElement('button');
+    let d43 = document.createElement('button');
+
+
+    // Set text for each button
+    a43.innerHTML = `<button id = "a43" class = "a">${answerOptions[0]}</button>`;
+    b43.innerHTML = `<button id = "b43" class = "b">${answerOptions[1]}</button>`;
+    c43.innerHTML = `<button id = "c43" class = "c">${answerOptions[2]}</button>`;
+    d43.innerHTML = `<button id = "d43" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a43);
+    answerSection.appendChild(b43);
+    answerSection.appendChild(c43);
+    answerSection.appendChild(d43);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a43.addEventListener("click", function checka43(){
+        if (a43.click){
+            // Hide answers
+            a43.style.display = 'none';
+            b43.style.display = 'none';
+            c43.style.display = 'none';
+            d43.style.display = 'none';
+
+            // Calls next function
+            q44();
+        }
+    });
+
+    b43.addEventListener("click", function checkb43(){
+        if (b43.click){
+            // Hide answers
+            a43.style.display = 'none';
+            b43.style.display = 'none';
+            c43.style.display = 'none';
+            d43.style.display = 'none';
+
+            // Calls next function
+            q44();
+        }
+    });
+
+    c43.addEventListener("click", function checkc43(){
+        if (c43.click){
+            // Hide answers
+            a43.style.display = 'none';
+            b43.style.display = 'none';
+            c43.style.display = 'none';
+            d43.style.display = 'none';
+
+            // Calls next function
+            q44();
+        }
+    });
+
+    d43.addEventListener("click", function checkd43(){
+        if(d43.click){
+            // Hide answers
+            a43.style.display = 'none';
+            b43.style.display = 'none';
+            c43.style.display = 'none';
+            d43.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q44();
+        }
+    });
+};
+
+// Utah Question
+function q44(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[43]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`St. George`, `Ogden`, `${capitols[43]}`,`Moab`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a44 = document.createElement('button');
+    let b44 = document.createElement('button');
+    let c44 = document.createElement('button');
+    let d44 = document.createElement('button');
+
+
+    // Set text for each button
+    a44.innerHTML = `<button id = "a44" class = "a">${answerOptions[0]}</button>`;
+    b44.innerHTML = `<button id = "b44" class = "b">${answerOptions[1]}</button>`;
+    c44.innerHTML = `<button id = "c44" class = "c">${answerOptions[2]}</button>`;
+    d44.innerHTML = `<button id = "d44" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a44);
+    answerSection.appendChild(b44);
+    answerSection.appendChild(c44);
+    answerSection.appendChild(d44);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a44.addEventListener("click", function checka44(){
+        if (a44.click){
+            // Hide answers
+            a44.style.display = 'none';
+            b44.style.display = 'none';
+            c44.style.display = 'none';
+            d44.style.display = 'none';
+
+            // Calls next function
+            q45();
+        }
+    });
+
+    b44.addEventListener("click", function checkb44(){
+        if (b44.click){
+            // Hide answers
+            a44.style.display = 'none';
+            b44.style.display = 'none';
+            c44.style.display = 'none';
+            d44.style.display = 'none';
+
+            // Calls next function
+            q45();
+        }
+    });
+
+    c44.addEventListener("click", function checkc44(){
+        if (c44.click){
+            // Hide answers
+            a44.style.display = 'none';
+            b44.style.display = 'none';
+            c44.style.display = 'none';
+            d44.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q45();
+        }
+    });
+
+    d44.addEventListener("click", function checkd44(){
+        if(d44.click){
+            // Hide answers
+            a44.style.display = 'none';
+            b44.style.display = 'none';
+            c44.style.display = 'none';
+            d44.style.display = 'none';
+
+            // Calls next function
+            q45();
+        }
+    });
+};
+
+// Vermont Question
+function q45(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[44]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`${capitols[44]}`, `Newport`, `Brattleboro`,`Manchester`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a45 = document.createElement('button');
+    let b45 = document.createElement('button');
+    let c45 = document.createElement('button');
+    let d45 = document.createElement('button');
+
+
+    // Set text for each button
+    a45.innerHTML = `<button id = "a45" class = "a">${answerOptions[0]}</button>`;
+    b45.innerHTML = `<button id = "b45" class = "b">${answerOptions[1]}</button>`;
+    c45.innerHTML = `<button id = "c45" class = "c">${answerOptions[2]}</button>`;
+    d45.innerHTML = `<button id = "d45" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a45);
+    answerSection.appendChild(b45);
+    answerSection.appendChild(c45);
+    answerSection.appendChild(d45);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a45.addEventListener("click", function checka45(){
+        if (a45.click){
+            // Hide answers
+            a45.style.display = 'none';
+            b45.style.display = 'none';
+            c45.style.display = 'none';
+            d45.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q46();
+        }
+    });
+
+    b45.addEventListener("click", function checkb45(){
+        if (b45.click){
+            // Hide answers
+            a45.style.display = 'none';
+            b45.style.display = 'none';
+            c45.style.display = 'none';
+            d45.style.display = 'none';
+
+            // Calls next function
+            q46();
+        }
+    });
+
+    c45.addEventListener("click", function checkc45(){
+        if (c45.click){
+            // Hide answers
+            a45.style.display = 'none';
+            b45.style.display = 'none';
+            c45.style.display = 'none';
+            d45.style.display = 'none';
+
+            // Calls next function
+            q46();
+        }
+    });
+
+    d45.addEventListener("click", function checkd45(){
+        if(d45.click){
+            // Hide answers
+            a45.style.display = 'none';
+            b45.style.display = 'none';
+            c45.style.display = 'none';
+            d45.style.display = 'none';
+
+            // Calls next function
+            q46();
+        }
+    });
+};
+
+// Virginia Question
+function q46(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[45]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`${capitols[45]}`, `Alexandria`, `Virginia Beach`,`Norfolk`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a46 = document.createElement('button');
+    let b46 = document.createElement('button');
+    let c46 = document.createElement('button');
+    let d46 = document.createElement('button');
+
+
+    // Set text for each button
+    a46.innerHTML = `<button id = "a46" class = "a">${answerOptions[0]}</button>`;
+    b46.innerHTML = `<button id = "b46" class = "b">${answerOptions[1]}</button>`;
+    c46.innerHTML = `<button id = "c46" class = "c">${answerOptions[2]}</button>`;
+    d46.innerHTML = `<button id = "d46" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a46);
+    answerSection.appendChild(b46);
+    answerSection.appendChild(c46);
+    answerSection.appendChild(d46);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a46.addEventListener("click", function checka46(){
+        if (a46.click){
+            // Hide answers
+            a46.style.display = 'none';
+            b46.style.display = 'none';
+            c46.style.display = 'none';
+            d46.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q47();
+        }
+    });
+
+    b46.addEventListener("click", function checkb46(){
+        if (b46.click){
+            // Hide answers
+            a46.style.display = 'none';
+            b46.style.display = 'none';
+            c46.style.display = 'none';
+            d46.style.display = 'none';
+
+            // Calls next function
+            q47();
+        }
+    });
+
+    c46.addEventListener("click", function checkc46(){
+        if (c46.click){
+            // Hide answers
+            a46.style.display = 'none';
+            b46.style.display = 'none';
+            c46.style.display = 'none';
+            d46.style.display = 'none';
+
+            // Calls next function
+            q47();
+        }
+    });
+
+    d46.addEventListener("click", function checkd46(){
+        if(d46.click){
+            // Hide answers
+            a46.style.display = 'none';
+            b46.style.display = 'none';
+            c46.style.display = 'none';
+            d46.style.display = 'none';
+
+            // Calls next function
+            q47();
+        }
+    });
+};
+
+// Washington Question
+function q47(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[46]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`Vancouver`, `Spokane`, `${capitols[46]}`,`Seattle`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a47 = document.createElement('button');
+    let b47 = document.createElement('button');
+    let c47 = document.createElement('button');
+    let d47 = document.createElement('button');
+
+
+    // Set text for each button
+    a47.innerHTML = `<button id = "a47" class = "a">${answerOptions[0]}</button>`;
+    b47.innerHTML = `<button id = "b47" class = "b">${answerOptions[1]}</button>`;
+    c47.innerHTML = `<button id = "c47" class = "c">${answerOptions[2]}</button>`;
+    d47.innerHTML = `<button id = "d47" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a47);
+    answerSection.appendChild(b47);
+    answerSection.appendChild(c47);
+    answerSection.appendChild(d47);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a47.addEventListener("click", function checka47(){
+        if (a47.click){
+            // Hide answers
+            a47.style.display = 'none';
+            b47.style.display = 'none';
+            c47.style.display = 'none';
+            d47.style.display = 'none';
+
+            // Calls next function
+            q48();
+        }
+    });
+
+    b47.addEventListener("click", function checkb47(){
+        if (b47.click){
+            // Hide answers
+            a47.style.display = 'none';
+            b47.style.display = 'none';
+            c47.style.display = 'none';
+            d47.style.display = 'none';
+
+            // Calls next function
+            q48();
+        }
+    });
+
+    c47.addEventListener("click", function checkc47(){
+        if (c47.click){
+            // Hide answers
+            a47.style.display = 'none';
+            b47.style.display = 'none';
+            c47.style.display = 'none';
+            d47.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q48();
+        }
+    });
+
+    d47.addEventListener("click", function checkd47(){
+        if(d47.click){
+            // Hide answers
+            a47.style.display = 'none';
+            b47.style.display = 'none';
+            c47.style.display = 'none';
+            d47.style.display = 'none';
+
+            // Calls next function
+            q48();
+        }
+    });
+};
+
+// South Carolina Question
+function q48(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[47]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`Fayatteville`, `${capitols[47]}`, `Morgantown`,`Hurricane`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a48 = document.createElement('button');
+    let b48 = document.createElement('button');
+    let c48 = document.createElement('button');
+    let d48 = document.createElement('button');
+
+
+    // Set text for each button
+    a48.innerHTML = `<button id = "a48" class = "a">${answerOptions[0]}</button>`;
+    b48.innerHTML = `<button id = "b48" class = "b">${answerOptions[1]}</button>`;
+    c48.innerHTML = `<button id = "c48" class = "c">${answerOptions[2]}</button>`;
+    d48.innerHTML = `<button id = "d48" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a48);
+    answerSection.appendChild(b48);
+    answerSection.appendChild(c48);
+    answerSection.appendChild(d48);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a48.addEventListener("click", function checka48(){
+        if (a48.click){
+            // Hide answers
+            a48.style.display = 'none';
+            b48.style.display = 'none';
+            c48.style.display = 'none';
+            d48.style.display = 'none';
+
+            // Calls next function
+            q49();
+        }
+    });
+
+    b48.addEventListener("click", function checkb48(){
+        if (b48.click){
+            // Hide answers
+            a48.style.display = 'none';
+            b48.style.display = 'none';
+            c48.style.display = 'none';
+            d48.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q49();
+        }
+    });
+
+    c48.addEventListener("click", function checkc48(){
+        if (c48.click){
+            // Hide answers
+            a48.style.display = 'none';
+            b48.style.display = 'none';
+            c48.style.display = 'none';
+            d48.style.display = 'none';
+
+            // Calls next function
+            q49();
+        }
+    });
+
+    d48.addEventListener("click", function checkd48(){
+        if(d48.click){
+            // Hide answers
+            a48.style.display = 'none';
+            b48.style.display = 'none';
+            c48.style.display = 'none';
+            d48.style.display = 'none';
+
+            // Calls next function
+            q49();
+        }
+    });
+};
+
+// Wisconsin Question
+function q49(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[48]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`${capitols[48]}`, `Milwaukee`, `Green Bay`,`Wisconsin Dells`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a49 = document.createElement('button');
+    let b49 = document.createElement('button');
+    let c49 = document.createElement('button');
+    let d49 = document.createElement('button');
+
+
+    // Set text for each button
+    a49.innerHTML = `<button id = "a49" class = "a">${answerOptions[0]}</button>`;
+    b49.innerHTML = `<button id = "b49" class = "b">${answerOptions[1]}</button>`;
+    c49.innerHTML = `<button id = "c49" class = "c">${answerOptions[2]}</button>`;
+    d49.innerHTML = `<button id = "d49" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a49);
+    answerSection.appendChild(b49);
+    answerSection.appendChild(c49);
+    answerSection.appendChild(d49);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a49.addEventListener("click", function checka49(){
+        if (a49.click){
+            // Hide answers
+            a49.style.display = 'none';
+            b49.style.display = 'none';
+            c49.style.display = 'none';
+            d49.style.display = 'none';
+
+            // Increment score by 1
+            correct ++;
+
+            // Calls next function
+            q50();
+        }
+    });
+
+    b49.addEventListener("click", function checkb49(){
+        if (b49.click){
+            // Hide answers
+            a49.style.display = 'none';
+            b49.style.display = 'none';
+            c49.style.display = 'none';
+            d49.style.display = 'none';
+
+            // Calls next function
+            q50();
+        }
+    });
+
+    c49.addEventListener("click", function checkc49(){
+        if (c49.click){
+            // Hide answers
+            a49.style.display = 'none';
+            b49.style.display = 'none';
+            c49.style.display = 'none';
+            d49.style.display = 'none';
+
+            // Calls next function
+            q50();
+        }
+    });
+
+    d49.addEventListener("click", function checkd49(){
+        if(d49.click){
+            // Hide answers
+            a49.style.display = 'none';
+            b49.style.display = 'none';
+            c49.style.display = 'none';
+            d49.style.display = 'none';
+
+            // Calls next function
+            q50();
+        }
+    });
+};
+
+// Wyoming Question
+function q50(){
+    // Displays question for user to see
+    let question = `What is the capitol of ${states[49]}`;
+    questionDiv.innerHTML = question;
+    
+    // Answer Choices
+    let answerOptions = [`Ten Sleep`, `${capitols[49]}`, `Casper`,`Rock Springs`];
+
+    // Displays answers for user to select
+    answerDiv.style.display = 'flex';
+    answerDiv.style = 'flex-direction: column';
+
+    // Parent element
+    let answerSection = document.querySelector('#answerChoices');
+
+    // Create new buttons for responses
+    let a50 = document.createElement('button');
+    let b50 = document.createElement('button');
+    let c50 = document.createElement('button');
+    let d50 = document.createElement('button');
+
+
+    // Set text for each button
+    a50.innerHTML = `<button id = "a50" class = "a">${answerOptions[0]}</button>`;
+    b50.innerHTML = `<button id = "b50" class = "b">${answerOptions[1]}</button>`;
+    c50.innerHTML = `<button id = "c50" class = "c">${answerOptions[2]}</button>`;
+    d50.innerHTML = `<button id = "d50" class = "d">${answerOptions[3]}</button>`;
+
+
+    // Append each button
+    answerSection.appendChild(a50);
+    answerSection.appendChild(b50);
+    answerSection.appendChild(c50);
+    answerSection.appendChild(d50);
+
+    // Remove play button 
+    playBtnDiv.style.display = 'none';
+
+
+    // Event listeners for each option
+   a50.addEventListener("click", function checka50(){
+        if (a50.click){
+            // Hide answers
+            a50.style.display = 'none';
+            b50.style.display = 'none';
+            c50.style.display = 'none';
+            d50.style.display = 'none';
+
+            // Calls next function
+            endQuiz();
+        }
+    });
+
+    b50.addEventListener("click", function checkb50(){
+        if (b50.click){
+            // Hide answers
+            a50.style.display = 'none';
+            b50.style.display = 'none';
+            c50.style.display = 'none';
+            d50.style.display = 'none';
+
+            // Inrement score by 1
+            correct ++;
+
+            // Calls next function
+            endQuiz();
+        }
+    });
+
+    c50.addEventListener("click", function checkc50(){
+        if (c50.click){
+            // Hide answers
+            a50.style.display = 'none';
+            b50.style.display = 'none';
+            c50.style.display = 'none';
+            d50.style.display = 'none';
+
+            // Calls next function
+            endQuiz();
+        }
+    });
+
+    d50.addEventListener("click", function checkd50(){
+        if(d50.click){
+            // Hide answers
+            a50.style.display = 'none';
+            b50.style.display = 'none';
+            c50.style.display = 'none';
+            d50.style.display = 'none';
+
+            // Calls next function
+            endQuiz();
+        }
+    });
+};
+
+function endQuiz(){
+    // Change correct to score
+    score = `Score: ${correct}/50`
+
+    // Set score to local storage while calling showResults function
+    localStorage.setItem(score, showResults())
+    
+};
+
 // Shows results at end of quiz from local storage
 function showResults(){
-    //Set score to local storage
-    
-    // Display the score while pulling from local storage
-    resultsDiv.innerHTML = `Score: ${correct}/50`;
+    //Get score from local storage
+    localStorage.getItem(score)
+    // Display the score after pulling from local storage
+    resultsDiv.innerHTML = `${score}`;
 };
 
 // Event Listeners and Init call
