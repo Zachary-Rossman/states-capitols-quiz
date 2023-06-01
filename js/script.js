@@ -4890,9 +4890,21 @@ function endQuiz(){
 // Shows results at end of quiz from local storage
 function showResults(){
     //Get score from local storage
-    localStorage.getItem(score)
+    localStorage.getItem(score);
+
     // Display the score after pulling from local storage
     resultsDiv.innerHTML = `${score}`;
+
+    // Ask user if they would like to play again
+    questionDiv.style.display = 'flex';
+    questionDiv.innerHTML = 'Would you like to play again?';
+
+    // Display play button and set text to button
+    playBtnDiv.style.display = 'flex';
+    playBtnDiv.innerHTML = 'Click here to play again';
+
+    // If play button is clicked, go back to init function
+    playBtnDiv.addEventListener("click", init);
 };
 
 // Event Listeners and Init call
