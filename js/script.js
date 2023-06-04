@@ -11,18 +11,23 @@ let capitols = ['Montgomery', 'Jueau', 'Phoenix', 'Little Rock', 'Sacramento', '
 // Correct and incorrect responses need to be added for results
 let correct = 0;
 
+// Functions
+
 // Initial State
 function init(){
     // Hide answer options in intial state; Only showing when questions are being asked
     answerDiv.style.display = 'none';
+
+    // Hide results area
+    resultsDiv.style.display = 'none';
+
     // Directions for user
     questionDiv.innerHTML = `Click the button below to start the quiz.`;
+
 
     // When button is clicked, quiz begins
     playBtnDiv.addEventListener("click", q1);
 };
-
-// Functions
 
 // Function for first state; Will be repeated 50 times in alphabetical order
 function q1(){
@@ -4879,6 +4884,13 @@ function q50(){
 };
 
 function endQuiz(){
+    //Hide questionDiv and answerDiv
+    questionDiv.style.display = 'none';
+    answerDiv.style.display = 'none';
+    
+    // Display resultsDiv
+    resultsDiv.style.display = 'flex';
+
     // Change correct to score
     score = `Score: ${correct}/50`
 
@@ -4894,17 +4906,6 @@ function showResults(){
 
     // Display the score after pulling from local storage
     resultsDiv.innerHTML = `${score}`;
-
-    // Ask user if they would like to play again
-    questionDiv.style.display = 'flex';
-    questionDiv.innerHTML = 'Would you like to play again?';
-
-    // Display play button and set text to button
-    playBtnDiv.style.display = 'flex';
-    playBtnDiv.innerHTML = 'Click here to play again';
-
-    // If play button is clicked, go back to init function
-    playBtnDiv.addEventListener("click", init);
 };
 
 // Event Listeners and Init call
